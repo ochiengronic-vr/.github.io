@@ -93,7 +93,12 @@ color:black;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+transition: 0.3s;
 
+}
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
 }
 
 
@@ -112,10 +117,9 @@ background:#1e293b;
 padding:25px;
 border-radius:20px;
 margin:20px 0;
-
 box-shadow:0 10px 30px #000;
-
 transition:.3s;
+position:relative;
 
 }
 .card{
@@ -134,22 +138,9 @@ transition:.3s;
 .card:hover{
 
 transform:translateY(-10px);
+z-index:100;
 
 }
-
-
-
-/* PROJECTS */
-
-.projects{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-
-}
-
-
 
 /* SKILLS */
 
@@ -196,6 +187,7 @@ align-items:center;
 .dropdown{
     position:relative;
     display:inline-block;
+    z-index:10;
 }
 
 .dropdown button{
@@ -215,6 +207,8 @@ align-items:center;
     min-width:180px;
     border-radius:10px;
     overflow:hidden;
+    z-index:9999;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
 .dropdown div a{
@@ -239,19 +233,6 @@ align-items:center;
     border:5px solid #38bdf8;
     margin-bottom:20px;
 }
-.btn{
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-background:white;
-
-transform:scale(1.05);
-
-}
 .contact-links{
 
 display:flex;
@@ -262,6 +243,214 @@ flex-wrap:wrap;
 
 margin-top:20px;
 
+}
+.dropdown{
+    width:100%;
+}
+
+.dropdown button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    cursor:pointer;
+    font-weight:bold;
+}
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+.project-card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.project-card ul{
+    list-style:none;
+}
+
+.project-card li{
+    padding:10px 0;
+    border-bottom:1px solid #334155;
+}
+
+.project-card li:last-child{
+    border-bottom:none;
+}
+
+.project-card li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.project-card li a:hover{
+    color:#38bdf8;
+    padding-left:10px;
+}
+
+.view-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 25px;
+    background:#38bdf8;
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.view-btn:hover{
+    background:white;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+/* THINGS I LOVE */
+
+.interests{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.interest-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.interest-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(56,189,248,.4);
+}
+
+.interest-card i{
+    font-size:50px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.interest-card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.interest-card p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+/* WHY WORK WITH ME */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.service-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    border:2px solid transparent;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+    box-shadow:0 20px 40px rgba(56,189,248,.3);
+}
+
+.service-card i{
+    font-size:50px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.service-card p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+/* EDUCATION */
+
+.education{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.education-card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    transition:.4s;
+    border-left:5px solid #38bdf8;
+}
+
+.education-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(56,189,248,.3);
+}
+
+.education-card i{
+    font-size:50px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.education-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.education-card h4{
+    margin-bottom:15px;
+    color:white;
+}
+
+.education-card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.education-card span{
+    color:#38bdf8;
+    font-weight:bold;
 }
 </style>
 
@@ -286,9 +475,15 @@ margin-top:20px;
 <li><a href="#contact">Contact</a></li>
 
 </ul>
-
+<div class="dropdown">
+        <button>MENU</button>
+        <div>
+            <a href="">BANKIG SYSTEM</a>
+            <a href="restaurant.html">RESTAURANT MANAGEMENT SYSTEM</a>
+            <a href="life.html">LIFE</a>
+        </div>
+    </div>
 </nav>
-
 </header>
 <section class="hero" id="home">
     <img src="logo.jpeg" alt="Rocky" class="profile">
@@ -296,8 +491,7 @@ margin-top:20px;
 
 <h1>Hello, I'm ROCKY </h1>
 
-<p>Full Stack Developer | Graphic Designer</p>
-
+<p>Full Stack Developer | Software Engineering Student | Cloud Engineering Enthusiast</p>
 
 <a class="btn" href="#contact">
 Hire Me
@@ -308,18 +502,6 @@ Hire Me
 
 
 </section>
-
-<div class="dropdown">
-        <button>MENU</button>
-        <div>
-            <a href="">BANKIG SYSTEM</a>
-            <a href="">ESTATE</a>
-            <a href="https://rockyworld.my.canva.site/vr">LIFE</a>
-        </div>
-    </div>
-
-
-
 <section id="about">
 
 
@@ -330,7 +512,7 @@ Hire Me
 
 <p>
 
-I am Rocky, a Full Stack Web Developer and Graphic Designer based in Kenya. I build responsive websites, management systems, and creative digital solutions that help businesses grow.
+I am Rocky, a Full Stack Developer and Cloud Engineer based in Kenya. I build responsive websites, management systems, and creative digital solutions that help businesses grow.
 
 I work with HTML, CSS, JavaScript, Python and modern technologies.
 
@@ -357,9 +539,41 @@ I work with HTML, CSS, JavaScript, Python and modern technologies.
 
 </section>
 
+<section id="education">
 
+    <h2>🎓 Education</h2>
 
+    <div class="education">
 
+        <div class="education-card">
+
+            <i class="fas fa-university"></i>
+
+            <h3>Kisii University</h3>
+
+            <h4>Bachelor of Science in Software Engineering</h4>
+
+            <p>
+                <span>Specialization:</span> Cloud Engineering
+            </p>
+
+            <p>
+                <span>Status:</span> Current Student
+            </p>
+
+            <p>
+                <span>Location:</span> Kisii, Kenya
+            </p>
+
+            <p>
+                Passionate about building scalable web applications, cloud-based solutions, and modern software systems.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 <section id="projects">
 
@@ -369,44 +583,221 @@ I work with HTML, CSS, JavaScript, Python and modern technologies.
 
 <div class="projects">
 
+<div class="project-card">
 
-<div class="card">
+<h3>🔵 Business Management Systems</h3>
 
-<h3>Online Banking System</h3>
+<ul>
 
-<p>Secure banking management platform.</p>
+<li><a href="school.html">📚 School Management System</a></li>
+
+<li><a href="hospital.html">🏥 Hospital Management System</a></li>
+
+<li><a href="estate.html">🏢 Estate Management System</a></li>
+
+<li><a href="inventory.html">📦 Inventory Management System</a></li>
+
+<li><a href="payroll.html">💰 Payroll Management System</a></li>
+
+<li><a href="crm.html">👥 CRM System</a></li>
+
+<li><a href="pos.html">🛒 Point of Sale System</a></li>
+
+</ul>
+
+<a href="business-projects.html" class="view-btn">
+View Projects →
+</a>
+
+</div>
+
+<div class="project-card">
+
+    <h3>🟣 E-Commerce & Financial Systems</h3>
+
+    <ul>
+
+        <li><a href="ecommerce.html">🛒 E-Commerce Platform</a></li>
+
+        <li><a href="banking.html">🏦 Banking System</a></li>
+
+        <li><a href="hotel-booking.html">🏨 Hotel Booking System</a></li>
+
+        <li><a href="restaurant-management.html">🍽️ Restaurant Management System</a></li>
+
+        <li><a href="payment-gateway.html">💳 Payment Gateway Integration</a></li>
+
+        <li><a href="food-delivery.html">🚚 Restaurant Ordering & Delivery System</a></li>
+
+    </ul>
+
+    <a href="ecommerce-projects.html" class="view-btn">
+        View Projects →
+    </a>
 
 </div>
 
 
+<div class="project-card">
 
-<div class="card">
+    <h3>🟠 Social & Community Platforms</h3>
 
-<h3>Estate Management System</h3>
+    <ul>
 
-<p>Property and tenant management system.</p>
+        <li><a href="social-media.html">📱 Social Media Platform</a></li>
 
-</div>
+        <li><a href="job-portal.html">💼 Job Portal</a></li>
 
+        <li><a href="freelance-marketplace.html">🌍 Freelance Marketplace</a></li>
 
+    </ul>
 
-<div class="card">
-
-<h3>Mobile Application</h3>
-
-<p>Modern mobile app solutions.</p>
-
-</div>
-
+    <a href="social-projects.html" class="view-btn">
+        View Projects →
+    </a>
 
 </div>
 
+<div class="project-card">
 
+    <h3>🔴 Education Platforms</h3>
+
+    <ul>
+
+        <li><a href="online-learning.html">🎓 Online Learning Platform</a></li>
+
+        <li><a href="research-platform.html">🔬 Research Platform</a></li>
+
+        <li><a href="learning-management-system.html">📚 Learning Management System (LMS)</a></li>
+
+        <li><a href="online-exam.html">📝 Online Examination System</a></li>
+
+        <li><a href="online-voting.html">🗳️ Online Voting System</a></li>
+
+    </ul>
+
+    <a href="education-projects.html" class="view-btn">
+        View Projects →
+    </a>
+
+</div>
+
+<div class="project-card">
+
+    <h3>🟡 AI-Powered Applications</h3>
+
+    <ul>
+
+        <li><a href="ai-saas.html">🤖 AI SaaS Platform</a></li>
+
+        <li><a href="ai-chatbot.html">💬 AI Chatbot</a></li>
+
+        <li><a href="ai-image-generator.html">🎨 AI Image Generation</a></li>
+
+    </ul>
+
+    <a href="ai-projects.html" class="view-btn">
+        View Projects →
+    </a>
+
+</div>
+<div class="project-card">
+
+    <h3>⚫ Productivity & Collaboration Tools</h3>
+
+    <ul>
+
+        <li><a href="project-management.html">📋 Project Management System</a></li>
+
+        <li><a href="task-manager.html">✅ Task Management System</a></li>
+
+        <li><a href="team-collaboration.html">👥 Team Collaboration Platform</a></li>
+
+        <li><a href="document-management.html">📁 Document Management System</a></li>
+
+        <li><a href="time-tracker.html">⏱️ Time Tracking System</a></li>
+
+    </ul>
+
+    <a href="productivity-projects.html" class="view-btn">
+        View Projects →
+    </a>
+
+</div>
+
+</div>
 </section>
 
+<section id="services">
+
+    <h2>🚀 Why Work With Me?</h2>
+
+    <div class="services">
+
+        <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Modern Web Development</h3>
+            <p>I build responsive, fast and user-friendly websites using modern web technologies.</p>
+        </div>
+
+        <div class="interest-card">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud Computing</h3>
+            <p>I enjoy learning cloud technologies and how scalable applications are deployed on modern cloud platforms.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Full Stack Solutions</h3>
+            <p>From frontend interfaces to backend systems and databases, I develop complete web applications.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-palette"></i>
+            <h3>Graphic Design</h3>
+            <p>I design posters, social media graphics, branding materials and other creative digital content.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Responsive Design</h3>
+            <p>Your website will look great and work smoothly on desktops, tablets and mobile devices.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-rocket"></i>
+            <h3>Performance</h3>
+            <p>I focus on clean code, fast loading times and an enjoyable user experience.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-headset"></i>
+            <h3>Reliable Support</h3>
+            <p>I value communication, timely delivery and continuous improvement throughout every project.</p>
+        </div>
+
+         <div class="interest-card">
+            <i class="fas fa-robot"></i>
+            <h3>Artificial Intelligence</h3>
+            <p>I love exploring AI tools and integrating intelligent features into modern web applications.</p>
+        </div>
 
 
+         <div class="interest-card">
+            <i class="fas fa-book-open"></i>
+            <h3>Continuous Learning</h3>
+            <p>Technology changes every day, and I'm committed to learning new tools and improving my skills.</p>
+        </div>
 
+        <div class="interest-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Problem Solving</h3>
+            <p>I enjoy solving real-world problems by designing practical software solutions for businesses.</p>
+        </div>
+
+    </div>
+
+</section>
 
 
 <section id="contact">
@@ -416,30 +807,25 @@ I work with HTML, CSS, JavaScript, Python and modern technologies.
 
 
 <div class="card">
-<a href="tel:+254701186176">
 <div class="contact-links">
 
 <a href="mailto:ochiengronic@gmail.com">
-<i class="fas fa-envelope"></i> Email
+    <i class="fas fa-envelope"></i> Email
 </a>
 
 <a href="tel:+254701186176">
-<i class="fas fa-phone"></i> Call
+    <i class="fas fa-phone"></i> Call
 </a>
 
 <a href="https://www.linkedin.com/in/ronic-ochieng-1ab3a8232/" target="_blank">
 <i class="fab fa-linkedin"></i> LinkedIn
 </a>
 
-<a href="https://tiktok.com/@rocky.tech002" target="_blank">
+<a href="https://tiktok.com/@rocky" target="_blank">
 <i class="fab fa-tiktok"></i> TikTok
 </a>
 
 </div>
-
-</a>
-
-
 </div>
 
 
