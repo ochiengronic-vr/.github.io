@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "Full Stack Developer",
             "Software Engineering Student",
             "Cloud Engineering Enthusiast",
-            "Graphic Designer",
+            "Cybersecurity",
             "Creative Problem Solver"
         ];
 
