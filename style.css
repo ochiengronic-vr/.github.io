@@ -616,6 +616,7 @@ background: white;
 .github-all {
 text-align: center;
 margin-top: 40px;
+overflow: hidden;
 }
 .github-all-btn {
 display: inline-block;
