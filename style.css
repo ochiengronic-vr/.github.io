@@ -655,3 +655,6 @@ padding: 30px;
         width: 100%;
     }
 }
+.hide github{
+    overflow:hidden;
+    }
