@@ -627,6 +627,7 @@ text-decoration: none;
 border-radius: 30px;
 font-weight: bold;
 transition: 0.3s;
+overflow: hidden;
 }
 
 .github-all-btn:hover {
