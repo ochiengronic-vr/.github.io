@@ -491,6 +491,7 @@ GITHUB PROJECTS
 ===================================== */
 .github-projects {
 margin-top: 70px;
+overflow: hidden;
 }
 .github-intro {
 text-align: center;
