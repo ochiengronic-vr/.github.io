@@ -661,3 +661,6 @@ padding: 30px;
 .hide github{
     overflow:hidden;
     }
+#github-section {
+    display: none;
+}
