@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
 
             alert(
                 `Nice to meet you, ${visitorName}! 🚀\n\n`
-                + "Welcome to my portfolio."
+                + "Welcome to my WORLD."
             );
 
             localStorage.setItem(
