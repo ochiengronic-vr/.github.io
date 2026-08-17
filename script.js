@@ -1,4 +1,43 @@
 // =====================================
+// WELCOME PROMPT — FIRST VISIT ONLY
+// =====================================
+
+window.addEventListener("load", function () {
+
+    const hasVisited = localStorage.getItem("rocky-visited");
+
+    if (!hasVisited) {
+
+        const visitorName = window.prompt(
+            "👋 Welcome to Rocky Tech!\n\nWhat is your name?"
+        );
+
+        if (visitorName && visitorName.trim() !== "") {
+
+            alert(
+                `Nice to meet you, ${visitorName}! 🚀\n\n`
+                + "Welcome to my portfolio."
+            );
+
+            localStorage.setItem(
+                "rocky-visitor-name",
+                visitorName.trim()
+            );
+
+        } else {
+
+            alert(
+                "Welcome to Rocky Tech! 🚀\n\n"
+                + "Enjoy exploring my portfolio."
+            );
+        }
+
+        localStorage.setItem("rocky-visited", "true");
+    }
+
+});
+
+// =====================================
 // ROCKY PORTFOLIO JAVASCRIPT
 // =====================================
 
