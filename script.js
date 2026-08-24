@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
 
             alert(
                 "Welcome to Rocky Tech! 🚀\n\n"
-                + "Enjoy exploring my portfolio."
+                + "Enjoy exploring my World."
             );
         }
 
