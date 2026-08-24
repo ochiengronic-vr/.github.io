@@ -152,8 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             "🎨 Graphic Designer",
 
-            "📈 Digital Marketer",
-
             "🤖 AI Enthusiast",
 
             "💡 Creative Problem Solver"
