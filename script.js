@@ -55,10 +55,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentYear = document.getElementById("currentYear");
     const profileImage = document.querySelector(".profile");
     const skillBars = document.querySelectorAll(".skill-progress");
+    const image = document.getElementById("image");
+    const button = document.getElementById("button");
 
 
     console.log("🚀 Rocky Portfolio JavaScript connected!");
+    //Image section
+    button.addEventListener("click", function () {
 
+    if (image.style.display === "none") {
+
+        // Show image
+       image.style.display = "block";
+       button.textContent = "Hide Image";
+
+  } else {
+
+        //Hide image
+        image.style.display = "none";
+        button.textContent = "Show Image";
+
+     }
+
+ });
 
     // =====================================
     // MOBILE NAVIGATION
@@ -794,3 +813,108 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 });
+const CACHE_NAME = "rocky-tech-v1";
+
+const FILES_TO_CACHE = [
+    "./",
+    "./index.html",
+    "./style.css",
+    "./script.js",
+    "./logo.jpeg",
+    "./cv.pdf",
+    "./restaurant.html"
+];
+
+self.addEventListener("install", event => {
+
+    event.waitUntil(
+
+        caches.open(CACHE_NAME)
+            .then(cache => {
+
+                return cache.addAll(FILES_TO_CACHE);
+
+            })
+
+    );
+
+    self.skipWaiting();
+
+});
+
+
+self.addEventListener("activate", event => {
+
+    event.waitUntil(
+
+        caches.keys()
+            .then(cacheNames => {
+
+                return Promise.all(
+
+                    cacheNames
+                        .filter(name => name !== CACHE_NAME)
+                        .map(name => caches.delete(name))
+
+                );
+
+            })
+
+    );
+
+    self.clients.claim();
+
+});
+
+
+self.addEventListener("fetch", event => {
+
+    event.respondWith(
+
+        caches.match(event.request)
+            .then(cachedResponse => {
+
+                return cachedResponse ||
+                    fetch(event.request);
+
+            })
+            .catch(() => {
+
+                return caches.match("./index.html");
+
+            })
+
+    );
+
+});
+
+// =====================================
+// ROCKY TECH APP — SERVICE WORKER
+// =====================================
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(registration => {
+
+                console.log(
+                    "🚀 Rocky Tech App Service Worker registered:",
+                    registration.scope
+                );
+
+            })
+            .catch(error => {
+
+                console.error(
+                    "❌ Service Worker registration failed:",
+                    error
+                );
+
+            });
+
+    });
+
+}
